@@ -1,3 +1,5 @@
+/* exported YTMenu*/
+'use strict';
 /**
  * ytmenu.js v1.0.0
  * http://www.codrops.com
@@ -12,13 +14,13 @@ var YTMenu = (function() {
 
 	function init() {
 		
-		[].slice.call( document.querySelectorAll( '.dr-menu' ) ).forEach( function( el, i ) {
+		[].slice.call( document.querySelectorAll( '.dr-menu' ) ).forEach( function( el ) {
 
 			var trigger = el.querySelector( 'div.dr-trigger' ),
 				icon = trigger.querySelector( 'span.icon-menu' ),
 				open = false;
 
-			trigger.addEventListener( 'click', function( event ) {
+			trigger.addEventListener( 'click', function( ) {
 				if( !open ) {
 					el.className += ' dr-menu-open';
 					open = true;
