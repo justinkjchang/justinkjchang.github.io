@@ -16,6 +16,7 @@
 
 body {
   padding: 0;
+  background: #91cfa1;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -83,9 +84,9 @@ body {
 
 .side {
   float: right;
-  width: 30%;
+  width: 20%;
   padding-right: 20px;
-  min-width: 320px;
+  min-width: 300px;
   box-shadow: 1px 0 rgba(0,0,0,0.1);
 }
 

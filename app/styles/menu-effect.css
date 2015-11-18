@@ -32,10 +32,10 @@
 .dr-menu.dr-menu-open > div .dr-icon {
 	color: #60a773;
 	left: 100%;
-	-webkit-transform: translateX(-100%);
-	-moz-transform: translateX(-100%);
-	-ms-transform: translateX(-100%);
-	transform: translateX(-100%);
+	-webkit-transform: translateX(-130%);
+	-moz-transform: translateX(-130%);
+	-ms-transform: translateX(-130%);
+	transform: translateX(-130%);
 }
 
 .dr-menu > div .dr-icon:after {
