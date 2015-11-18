@@ -8,7 +8,9 @@
  * Controller of the justinkjchanggithubioApp
  */
 angular.module('justinkjchanggithubioApp')
-  .controller('AboutCtrl', function () {
+  .controller('AboutCtrl', function ($scope, $route) {
+  	$scope.$route = $route;
+  	console.log($scope.$route.current.activetab);
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
