@@ -9,10 +9,13 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/please-wait/build/please-wait.css" />
+    <link rel="stylesheet" href="bower_components/SpinKit/css/spinkit.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/menu-effect.css">
     <!-- endbuild -->
   </head>
   <body ng-app="justinkjchanggithubioApp">
@@ -33,7 +36,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">justinkjchanggithubio</a>
+            <a class="navbar-brand" href="#/">Justin Chang</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -41,7 +44,7 @@
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
               <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li><a ng-href="#/contact">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -49,7 +52,23 @@
     </div>
 
     <div class="container">
-    <div ng-view=""></div>
+      <div class="main">
+        <div class="main-content" ng-view=""></div>
+        <div class="side">
+          <nav class="dr-menu">
+            <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Account</a></div>
+            <ul>
+              <li><a class="dr-icon dr-icon-user" href="#">Justin Chang</a></li>
+              <li><a class="dr-icon dr-icon-camera" href="#">Resume</a></li>
+              <li><a class="dr-icon dr-icon-heart" href="#">Projects</a></li>
+              <li><a class="dr-icon dr-icon-bullhorn" href="#">Random</a></li>
+              <li><a class="dr-icon dr-icon-download" href="#">Downloads</a></li>
+              <li><a class="dr-icon dr-icon-settings" href="#">Settings</a></li>
+              <li><a class="dr-icon dr-icon-switch" href="#">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
 
     <div class="footer">
@@ -81,13 +100,33 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/please-wait/build/please-wait.js"></script>
     <!-- endbower -->
+    <!-- re-enable when done debugging
+    <script type="text/javascript">
+      window.loading_screen = window.pleaseWait({
+        logo: "images/yeoman.png",
+        backgroundColor: '#f46d3b',
+        loadingHtml: "<div class='sk-wave'><div class='sk-rect sk-rect1'></div><div class='sk-rect sk-rect2'></div><div class='sk-rect sk-rect3'></div><div class='sk-rect sk-rect4'></div><div class='sk-rect sk-rect5'></div></div>"
+      });
+      $('.sk-rect').css('background-color', 'white');
+      $('.sk-rect').css('margin', '0 3px 0 0');
+      $(window).load(function() {
+        setTimeout(function() {
+          window.loading_screen.finish();
+        }, 1500);
+        
+      });
+
+    </script>
+    -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/menu-effect.js"></script>
         <!-- endbuild -->
 </body>
 </html>

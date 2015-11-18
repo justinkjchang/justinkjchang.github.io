@@ -1,3 +1,12 @@
+/*
+* { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+*/
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -59,10 +68,41 @@ body {
   margin-top: 28px;
 }
 
+/* please-wait css */
+.loading-message {
+  cursor: pointer;
+}
+.sk-spinner-wave div {
+  background-color: #FFF;
+}
+
+.main {
+  /* max-width: 69em; */
+  min-height: 600px;
+  padding: 2em 0 0 0;
+}
+
+.side {
+  float: right;
+  width: 30%;
+  padding-right: 20px;
+  min-width: 320px;
+  box-shadow: 1px 0 rgba(0,0,0,0.1);
+}
+
+.main-content {
+  float: right;
+  width: 70%;
+}
+
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1200px) {
   .container {
-    max-width: 730px;
+    max-width: 1200px; 
+  }
+  .main-content {
+    float: inherit;
+    margin: auto;
   }
 
   /* Remove the padding we set earlier */
