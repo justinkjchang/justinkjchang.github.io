@@ -392,6 +392,14 @@ module.exports = function (grunt) {
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= yeoman.dist %>'
+        }, 
+        // for icomoon
+        {
+          expand: true,
+          dot: true,
+          cwd: 'bower_components/icomoon-bower',
+          src: ['fonts/*.*'],
+          dest: '<%= yeoman.dist %>/styles'
         }]
       },
       styles: {
